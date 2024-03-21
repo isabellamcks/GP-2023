@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cas8bn8v4nc5d"]
+
+[ext_resource type="Script" path="res://ColorRect.gd" id="1_yi154"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_klje3"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(61, 57)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_klje3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 681.0
+offset_top = 132.0
+offset_right = 721.0
+offset_bottom = 172.0
+pivot_offset = Vector2(20, 20)
+script = ExtResource("1_yi154")
