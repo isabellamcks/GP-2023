@@ -56,18 +56,6 @@ func play_sample(i):
 
 func make_sample_buttons():	
 	for i in range(samples.size()):
-		var sample = sample_scene.instantiate()
-		var b:Button = sample.get_node("Button")
-		b.connect("pressed", play_sample.bind(i))
-		var h = b.get_size().y
-		
-		var p = Vector2(0, h * i * 1.1)
-		sample.position = p
-		
-		patch.find_child("RichTextLabel", true).set_text(samples[i].resource_name)
-		patch.find_child("AudioStreamPlayer2D").stream = samples[i]
-		add_child(patch)
-		
 		var col_node = note_scene.instantiate()
 		# player.hit.connect(_on_player_hit.bind("sword", 100))
 		col_node.text = samples[i].resource_name
